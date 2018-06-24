@@ -1,0 +1,5 @@
+cd ymc
+./reg_config
+./send_pr
+./send_spec
+cd ..

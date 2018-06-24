@@ -1,0 +1,5 @@
+verilog xil_defaultlib "C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_512_sim_netlist.v" 
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

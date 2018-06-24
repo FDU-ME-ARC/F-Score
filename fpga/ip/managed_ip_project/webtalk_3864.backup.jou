@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sun Mar 11 17:07:03 2018
+# Process ID: 3864
+# Current directory: e:/project/vivado/ku115/ip/managed_ip_project
+# Command line: wbtcv.exe -mode batch -source e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project/ds_top_v1_0_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: e:/project/vivado/ku115/ip/managed_ip_project/webtalk.log
+# Journal file: e:/project/vivado/ku115/ip/managed_ip_project\webtalk.jou
+#-----------------------------------------------------------
+source e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project/ds_top_v1_0_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace

@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+path = $PWD
+cd `dirname $0`
+rm recv_data
+rm spectra_out
+./tandem.exe input.xml
+cd $path

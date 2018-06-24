@@ -1,0 +1,293 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sun Mar 11 15:37:48 2018
+# Process ID: 3764
+# Current directory: E:/project/vivado/ku115/ip/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3376 E:\project\vivado\ku115\ip\managed_ip_project\managed_ip_project.xpr
+# Log file: E:/project/vivado/ku115/ip/managed_ip_project/vivado.log
+# Journal file: E:/project/vivado/ku115/ip/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.xpr
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/project/vivado/ku115/ip/ip_repo/ds_top/src
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp e:/project/vivado/ku115/ip/ip_repo/ds_top/src/component.xml
+ipx::current_core e:/project/vivado/ku115/ip/ip_repo/ds_top/src/component.xml
+import_files
+ipx::add_bus_interface pep_axis [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+ipx::add_port_map TUSER [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name pep_user_s [ipx::get_port_maps TUSER -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name pep_valid_s [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name pep_last_s [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name pep_data_s [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name pep_keep_s [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name pep_ready_s [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_bus_interface spec [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces spec -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces spec -of_objects [ipx::current_core]]
+set_property name spec_axis [ipx::get_bus_interfaces spec -of_objects [ipx::current_core]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name spec_valid [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name spec_data [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name spec_last [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name spec_keep [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name spec_ready [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+set_property value pep_axis:spec_axis [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces clk -of_objects [ipx::current_core]]]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces m_clk -of_objects [ipx::current_core]]
+set_property value m_axis_s [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces m_clk -of_objects [ipx::current_core]]]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property range 4096 [ipx::get_address_blocks reg0 -of_objects [ipx::get_memory_maps s_axi -of_objects [ipx::current_core]]]
+set_property range_dependency {} [ipx::get_address_blocks reg0 -of_objects [ipx::get_memory_maps s_axi -of_objects [ipx::current_core]]]
+set_property vendor fudan [ipx::current_core]
+set_property library bio [ipx::current_core]
+set_property previous_version_for_upgrade xilinx.com:user:ds_top:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {e:/project/vivado/ku115/ip/ip_repo/ds_top/src c:/Users/diabolum/Desktop/dotscore} [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/src/component.xml
+close_project
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/project/vivado/ku115/ip/ip_repo/data_path
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+ipx::current_core e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+ipx::add_bus_interface spec_axis [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_data [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_valid [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_last [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_keep [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_ready [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_bus_interface pep_axis [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+ipx::add_port_map TUSER [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_user [ipx::get_port_maps TUSER -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_data [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_valid [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_last [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_keep [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_ready [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+add_files -norecurse -copy_to E:/project/vivado/ku115/ip/ip_repo/data_path/src {C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_208.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_axis_async_256_user_88.xcix}
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {fifo_async_fwft_208 fifo_axis_async_256_user_88}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {fifo_async_fwft_208 fifo_axis_async_256_user_88}] -no_script -sync -force -quiet
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces dma_clk -of_objects [ipx::current_core]]
+set_property value axis_dma [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces dma_clk -of_objects [ipx::current_core]]]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces usr_clk -of_objects [ipx::current_core]]
+set_property value spec_axis:pep_axis [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces usr_clk -of_objects [ipx::current_core]]]
+ipx::add_bus_interface pr_ddr_axis [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_valid_pr [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_data_pr [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_last_pr [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_keep_pr [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_ready_pr [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces pr_ddr_axis -of_objects [ipx::current_core]]]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces ddr_clk -of_objects [ipx::current_core]]
+set_property value pr_ddr_axis [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces ddr_clk -of_objects [ipx::current_core]]]
+convert_ips [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_async_fwft_208/fifo_async_fwft_208/fifo_async_fwft_208.xci]
+export_ip_user_files -of_objects  [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_async_fwft_208/fifo_async_fwft_208/fifo_async_fwft_208.xci] -sync -lib_map_path [list {modelsim=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/modelsim} {questa=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/questa} {riviera=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/riviera} {activehdl=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/activehdl}] -force -quiet
+set_property coreContainer.enable 1 [current_project]
+convert_ips [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88.xci]
+export_ip_user_files -of_objects  [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88.xci] -sync -lib_map_path [list {modelsim=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/modelsim} {questa=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/questa} {riviera=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/riviera} {activehdl=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/activehdl}] -force -quiet
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property vendor fudan [ipx::current_core]
+set_property library bio [ipx::current_core]
+set_property previous_version_for_upgrade xilinx.com:user:data_path:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {e:/project/vivado/ku115/ip/ip_repo/data_path e:/project/vivado/ku115/ip/ip_repo/ds_top/src c:/Users/diabolum/Desktop/dotscore} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  {e:/project/vivado/ku115/ip/ip_repo/data_path e:/project/vivado/ku115/ip/ip_repo/ds_top/src} [current_project]
+update_ip_catalog
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  e:/project/vivado/ku115/ip/ip_repo/data_path [current_project]
+update_ip_catalog
+update_ip_catalog -add_ip E:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml -repo_path e:/project/vivado/ku115/ip/ip_repo/data_path
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/ds_top/component.xml
+set_property source_mgmt_mode DisplayOnly [current_project]
+add_files -norecurse -scan_for_includes -copy_to E:/project/vivado/ku115/ip/ip_repo/data_path/ds_top/src E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_define.vh
+add_files -norecurse -scan_for_includes -copy_to E:/project/vivado/ku115/ip/ip_repo/data_path/ds_top/src {E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_b_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_frag_compare.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_registers.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_c_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_convert.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_y_seg_compare.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_bwd_frag.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_top.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_fwd_frag.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_convert_64.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_res_package.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_x_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_z_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_y_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_spec_store.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/tb_defines.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_z_frag_compare.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_para_add_16.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_register_syn.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_a_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_pep_store.v}
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path e:/project/vivado/ku115/ip/ip_repo/data_path
+ipx::edit_ip_in_project -upgrade true -name data_path_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+close_project
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/ds_top/component.xml
+close_project
+ipx::edit_ip_in_project -upgrade true -name data_path_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+add_files -norecurse -copy_to E:/project/vivado/ku115/ip/ip_repo/data_path/src {C:/Users/diabolum/Desktop/bio/ip/bram_320_160_8192.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_axis_async_256_user_208.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_512.xci}
+remove_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/bram_320_160_8192/bram_320_160_8192/bram_320_160_8192.xci
+close_project
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/ds_top/component.xml
+current_project managed_ip_project
+ipx::edit_ip_in_project -upgrade true -name data_path_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+add_files -norecurse -copy_to E:/project/vivado/ku115/ip/ip_repo/data_path/src {C:/Users/diabolum/Desktop/bio/ip/fifo_axis_async_256_user_208.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_512.xci}
+add_files -norecurse -copy_to E:/project/vivado/ku115/ip/ip_repo/data_path/src C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_512.xci
+add_files -norecurse C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_512.xci
+export_ip_user_files -of_objects  [get_files  C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_512.xci] -lib_map_path [list {modelsim=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project/data_path_v1_0_v1_0_project.cache/compile_simlib/modelsim} {questa=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project/data_path_v1_0_v1_0_project.cache/compile_simlib/questa} {riviera=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project/data_path_v1_0_v1_0_project.cache/compile_simlib/riviera} {activehdl=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project/data_path_v1_0_v1_0_project.cache/compile_simlib/activehdl}] -force -quiet
+close_project
+close_project
+update_ip_catalog -delete_ip fudan:bio:ds_top:1.0 -repo_path e:/project/vivado/ku115/ip/ip_repo/data_path
+update_ip_catalog -delete_ip fudan:bio:data_path:1.0 -repo_path e:/project/vivado/ku115/ip/ip_repo/data_path
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  E:/project/vivado/ku115/ip [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml
+set_property source_mgmt_mode DisplayOnly [current_project]
+add_files -norecurse -scan_for_includes E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_define.vh
+add_files -norecurse -scan_for_includes {E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_b_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_frag_compare.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_registers.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_c_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_convert.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_y_seg_compare.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_bwd_frag.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_top.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_fwd_frag.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_convert_64.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_res_package.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_x_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_z_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_y_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_spec_store.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/tb_defines.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_z_frag_compare.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_para_add_16.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_register_syn.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_a_type_core.v E:/project/vivado/ku115/ip/ip_repo/ds_top/src/ds_pep_store.v}
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path e:/project/vivado/ku115/ip
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml
+current_project managed_ip_project
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml
+current_project ds_top_v1_0_v1_0_project
+close_project
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml
+close_project
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml
+close_project
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/project/vivado/ku115/ip/ip_repo/data_path
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml
+close_project
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/project/vivado/ku115/ip/ip_repo/data_path
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+ipx::current_core e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+add_files -norecurse -copy_to E:/project/vivado/ku115/ip/ip_repo/data_path/src {C:/Users/diabolum/Desktop/bio/ip/bram_320_160_16384.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_208.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_axis_async_256_user_208.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_axis_async_256_user_88.xcix C:/Users/diabolum/Desktop/bio/ip/fifo_async_fwft_512.xci}
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {bram_320_160_16384 fifo_async_fwft_208 fifo_async_fwft_512 fifo_axis_async_256_user_208 fifo_axis_async_256_user_88}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {bram_320_160_16384 fifo_async_fwft_208 fifo_async_fwft_512 fifo_axis_async_256_user_208 fifo_axis_async_256_user_88}] -no_script -sync -force -quiet
+set_property vendor fudan [ipx::current_core]
+set_property library bio [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_interface spec_axis [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_data [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_last [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_valid [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_keep [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_spec_ready [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces spec_axis -of_objects [ipx::current_core]]]
+ipx::add_bus_interface pep_axis [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+ipx::add_port_map TUSER [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_user [ipx::get_port_maps TUSER -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_data [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_valid [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_last [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_keep [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]
+set_property physical_name axis_pep_ready [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces pep_axis -of_objects [ipx::current_core]]]
+ipx::add_bus_interface pr_axis [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:axis_rtl:1.0 [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:axis:1.0 [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]
+ipx::add_port_map TDATA [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_data_pr [ipx::get_port_maps TDATA -of_objects [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TVALID [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_valid_pr [ipx::get_port_maps TVALID -of_objects [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TLAST [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_last_pr [ipx::get_port_maps TLAST -of_objects [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TKEEP [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_keep_pr [ipx::get_port_maps TKEEP -of_objects [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]]
+ipx::add_port_map TREADY [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]
+set_property physical_name s_axis_ready_pr [ipx::get_port_maps TREADY -of_objects [ipx::get_bus_interfaces pr_axis -of_objects [ipx::current_core]]]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces dma_clk -of_objects [ipx::current_core]]
+set_property value axis_dma [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces dma_clk -of_objects [ipx::current_core]]]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces ddr_clk -of_objects [ipx::current_core]]
+set_property value pr_axis [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces ddr_clk -of_objects [ipx::current_core]]]
+ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces usr_clk -of_objects [ipx::current_core]]
+set_property value spec_axis:pep_axis [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces usr_clk -of_objects [ipx::current_core]]]
+convert_ips [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_async_fwft_208/fifo_async_fwft_208/fifo_async_fwft_208.xci]
+export_ip_user_files -of_objects  [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_async_fwft_208/fifo_async_fwft_208/fifo_async_fwft_208.xci] -sync -lib_map_path [list {modelsim=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/modelsim} {questa=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/questa} {riviera=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/riviera} {activehdl=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/activehdl}] -force -quiet
+set_property coreContainer.enable 1 [current_project]
+convert_ips [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88.xci]
+export_ip_user_files -of_objects  [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88/fifo_axis_async_256_user_88.xci] -sync -lib_map_path [list {modelsim=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/modelsim} {questa=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/questa} {riviera=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/riviera} {activehdl=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/activehdl}] -force -quiet
+convert_ips [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_axis_async_256_user_208/fifo_axis_async_256_user_208/fifo_axis_async_256_user_208.xci]
+export_ip_user_files -of_objects  [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/fifo_axis_async_256_user_208/fifo_axis_async_256_user_208/fifo_axis_async_256_user_208.xci] -sync -lib_map_path [list {modelsim=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/modelsim} {questa=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/questa} {riviera=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/riviera} {activehdl=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/activehdl}] -force -quiet
+convert_ips [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/bram_320_160_16384/bram_320_160_16384/bram_320_160_16384.xci]
+export_ip_user_files -of_objects  [get_files  E:/project/vivado/ku115/ip/ip_repo/data_path/src/bram_320_160_16384/bram_320_160_16384/bram_320_160_16384.xci] -sync -lib_map_path [list {modelsim=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/modelsim} {questa=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/questa} {riviera=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/riviera} {activehdl=e:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/edit_ip_project.cache/compile_simlib/activehdl}] -force -quiet
+ipx::merge_project_changes files [ipx::current_core]
+set_property name dma_axis [ipx::get_bus_interfaces axis_dma -of_objects [ipx::current_core]]
+set_property value dma_axis [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces dma_clk -of_objects [ipx::current_core]]]
+set_property previous_version_for_upgrade xilinx.com:user:data_path:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path e:/project/vivado/ku115/ip
+ipx::edit_ip_in_project -upgrade true -name data_path_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+close_project
+ipx::edit_ip_in_project -upgrade true -name data_path_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/data_path_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/data_path/component.xml
+current_project managed_ip_project
+ipx::edit_ip_in_project -upgrade true -name ds_top_v1_0_v1_0_project -directory E:/project/vivado/ku115/ip/managed_ip_project/managed_ip_project.tmp/ds_top_v1_0_v1_0_project e:/project/vivado/ku115/ip/ip_repo/ds_top/component.xml
+close_project
+close_project

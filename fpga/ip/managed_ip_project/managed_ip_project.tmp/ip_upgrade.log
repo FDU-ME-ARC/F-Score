@@ -1,0 +1,142 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Mar 11 16:46:48 2018
+| Host         : diabolum-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku115-flva1517-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_axis_async_256_user_88'
+
+1. Summary
+----------
+
+SUCCESS in the update of fifo_axis_async_256_user_88 (xilinx.com:ip:fifo_generator:13.1 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Mar 11 16:46:47 2018
+| Host         : diabolum-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku115-flva1517-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_axis_async_256_user_208'
+
+1. Summary
+----------
+
+SUCCESS in the update of fifo_axis_async_256_user_208 (xilinx.com:ip:fifo_generator:13.1 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Mar 11 16:46:46 2018
+| Host         : diabolum-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku115-flva1517-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_async_fwft_512'
+
+1. Summary
+----------
+
+SUCCESS in the update of fifo_async_fwft_512 (xilinx.com:ip:fifo_generator:13.1 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Mar 11 16:46:45 2018
+| Host         : diabolum-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku115-flva1517-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_async_fwft_208'
+
+1. Summary
+----------
+
+SUCCESS in the update of fifo_async_fwft_208 (xilinx.com:ip:fifo_generator:13.1 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Mar 11 16:46:44 2018
+| Host         : diabolum-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku115-flva1517-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'bram_320_160_16384'
+
+1. Summary
+----------
+
+SUCCESS in the update of bram_320_160_16384 (xilinx.com:ip:blk_mem_gen:8.3 (Rev. 4)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Mar 11 15:58:20 2018
+| Host         : diabolum-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku115-flva1517-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_axis_async_256_user_88'
+
+1. Summary
+----------
+
+SUCCESS in the update of fifo_axis_async_256_user_88 (xilinx.com:ip:fifo_generator:13.1 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sun Mar 11 15:58:19 2018
+| Host         : diabolum-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xcku115-flva1517-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fifo_async_fwft_208'
+
+1. Summary
+----------
+
+SUCCESS in the update of fifo_async_fwft_208 (xilinx.com:ip:fifo_generator:13.1 (Rev. 2)) to current project options.
+
